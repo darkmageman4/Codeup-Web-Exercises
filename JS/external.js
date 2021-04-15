@@ -22,3 +22,4 @@ if(userInput === "blue"){
 }else{
     alert ("Your favorite color is " + userInput);
 }
+

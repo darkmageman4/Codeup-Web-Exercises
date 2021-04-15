@@ -13,7 +13,7 @@
 //  -> if it is your favorite as well, then show a special message for the user
 //  -> otherwise, show the normal message
 
-alert("Welcome to my Website!");
+alert("Welcome to the Website!");
 
 var userInput = prompt("What is your favorite color?");
 

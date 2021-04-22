@@ -19,22 +19,23 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
-function analyzeColor(color){
-    if (color === "blue"){
-        return "the sky is blue";
-    } else if (color === "red")
-    {
-        return "Strawberries are red";
-    }
-    else if (color === "cyan")
-    {
-        return "I don't know anything about cyan";
-    }else {
-        return "I don't know that color bro!";
-    }
-
-}
-console.log(analyzeColor("blue"));
+// function analyzeColor(color){
+//     if (color === "blue"){
+//         return "blue is the color of the sky";
+//     } else if (color === "red")
+//     {
+//         return "Strawberries are red";
+//     }
+//     else if (color === "cyan")
+//     {
+//         return "I don't know anything about cyan";
+//     }else {
+//         return "I don't know that color bro!";
+//     }
+//
+// }
+//
+// console.log(analyzeColor("blue"));
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -49,11 +50,25 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * You should see a different message every time you refresh the page
  */
 analyzeColor(randomColor);
+
 /**
  * TODO:
  * Refactor your above function to use a switch-case statement
  */
-
+// function analyzeColor(color) {
+//     switch (color) {
+//         case "blue":
+//             return "blue is the color of the sky";
+//             break;
+//         case "red":
+//             return "Strawberries are red";
+//             break;
+//         default:
+//             return " I don't know anything about that" + color;
+//     }
+// }
+//
+// console.log(analyzeColor( "red"));
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
@@ -62,6 +77,16 @@ analyzeColor(randomColor);
  */
 
 /* ########################################################################## */
+// function getColor() {
+//     return prompt("What color?");
+//
+//     function theAlert() {
+//         analyzeColor(getColor());
+//         return getColor();
+//     }
+//     return
+// }
+// console.log(getColor("blue"));
 
 /**
  * TODO:
@@ -83,6 +108,58 @@ analyzeColor(randomColor);
  * return value.
  */
 
+function calculateTotal (luckyNumber,discountedPrice){
+    var luckyNumber
+    var discountedPrice
+    switch (luckyNumbercdcd){
+        case 1:
+            alert("Your number is 0");
+            alert("You get no discount");
+            alert("Total amount is")
+            break;
+        case 2:
+            alert("Your number is 1");
+            alert("Your dicsount is 10%");
+            alert("");
+            break;
+        case 3:
+            alert("Your number is 2");
+            alert("Your dicsount is 25%");
+            alert("Your amount is ");
+            break;
+        case 4:
+            alert("Your number is 3");
+            alert("Your dicsount is 35%");
+            alert("Your amount is 50")
+            break;
+        case 5:
+            alert("Your number is 4");
+            alert("Your dicsount is 50%");
+            alert("Your amount is ");
+            break;
+        case 6:
+            alert("Your number is 5");
+            alert("Your discount is 100%");
+            alert("Your amount is ");
+            break;
+    } return (calculateTotal() + "dollars")
+}
+console.log(calculateTotal(5));
+
+// function analyzeColor(color) {
+//     switch (color) {
+//         case "blue":
+//             return "blue is the color of the sky";
+//             break;
+//         case "red":
+//             return "Strawberries are red";
+//             break;
+//         default:
+//             return " I don't know anything about that" + color;
+//     }
+// }
+//
+// console.log(analyzeColor( "red"));
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 6.
@@ -93,6 +170,16 @@ analyzeColor(randomColor);
 // Generate a random number between 0 and 6
 // var luckyNumber = Math.floor(Math.random() * 6);
 
+// function numberToCurrency(num1,num2){
+//     var subtotal;
+//     var discount;
+// if(num1 === 0 )
+// }
+//
+// function amountAfterDiscount(){
+//     prompt("What is your total bill?");
+//
+// }
 /**
  * TODO:
  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
@@ -109,3 +196,7 @@ analyzeColor(randomColor);
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+function numberTest(){
+window.close
+}

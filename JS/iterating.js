@@ -62,13 +62,13 @@ var name = ['My','Name','Is','Wagner']
 function toEndAll () {
     function one() {
         var name = ['My', 'Name', 'Is', 'Wagner']
-        return console.log(name[0]);
+        return name[0];
     };
 
     function two() {
         var fruit = ["Banana", "Grape", "Apple", "Orange", "5th Fruit",];
         return console.log(fruit[1]);
-
+        return fruit[1]
     };
 
     function last() {

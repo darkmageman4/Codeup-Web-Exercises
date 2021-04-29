@@ -136,6 +136,7 @@ var myZoo = {
                 animalSound: 'N/a',
                 canFly: false,
                 livingPlace: "At DA Zoo",
+                return animal.sound
             },
             Snake: {
                 hasFur: false,

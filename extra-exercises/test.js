@@ -26,9 +26,9 @@
 // };
 // console.log(secondToLast([1, 2, 3, 4]));
 
-function firstAndSecond (x){
-    return x.slice(0,3);
-};
-console.log(firstAndSecond([1, 2, 3, 4]));
+// function firstAndSecond (x){
+//     return x.slice(0,3);
+// };
+// console.log(firstAndSecond([1, 2, 3, 4]));
 
 

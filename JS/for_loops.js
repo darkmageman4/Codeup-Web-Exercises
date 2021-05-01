@@ -3,7 +3,7 @@
 // for (var i = 1; i < 11; i++) {
 //     console.log(`7 x ${i} = ${i*7}`);
 // }
-
+//
 // function showMultiplicationTable(y) {
 //     for (var i = 1; i <= 10; i++) {
 //         var x = y * i
@@ -11,7 +11,7 @@
 //     }
 // }
 // showMultiplicationTable(3)
-
+//
 // function showMultiplicationTable(num){
 //     for(let i = 1; i <= 10; i++){
 //         console.log(` ${num} * ${i} = ${num * i}` );
@@ -55,7 +55,6 @@
 // TODO: Number 5
 // for(var i = 100 ; i >= 0; i -= 5) {
 //     console.log(i);
-//
 // }
 
 
@@ -96,7 +95,6 @@
 
 //     for(var i = 100 ; i >= 0; i--) {
 //         console.log(i);
-//
 // }
 
 // // TODO: loop through numbers 1 - 40. Print "marco" if it's divisible by 3. Print "polo" if it's divisible by 5.
@@ -114,5 +112,4 @@
 //     if (divisibleByFive(i) ){
 //         return
 //     }
-//
 // }

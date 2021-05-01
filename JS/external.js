@@ -23,3 +23,9 @@ if(userInput === "blue"){
     alert ("Your favorite color is " + userInput);
 }
 
+//     When the exercise asks you to use a number, instead use a prompt to ask the user for that number.
+//     Use an alert to show the results of each problem.
+var iWillPay = prompt("How much will I have to pay");
+alert(`I will pay ${iWillPay} doll hairs`);
+var payment = prompt("How much will I receive in payment for this week");
+alert(`I will receive ${payment} this week`);

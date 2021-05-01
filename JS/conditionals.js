@@ -49,7 +49,7 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Pass the `randomColor` variable to your function and console.log the results.
  * You should see a different message every time you refresh the page
  */
-analyzeColor(randomColor);
+// analyzeColor(randomColor);
 
 /**
  * TODO:
@@ -108,43 +108,43 @@ analyzeColor(randomColor);
  * return value.
  */
 
-function calculateTotal (luckyNumber,discountedPrice){
-    var luckyNumber
-    var discountedPrice
-    switch (luckyNumbercdcd){
-        case 1:
-            alert("Your number is 0");
-            alert("You get no discount");
-            alert("Total amount is")
-            break;
-        case 2:
-            alert("Your number is 1");
-            alert("Your dicsount is 10%");
-            alert("");
-            break;
-        case 3:
-            alert("Your number is 2");
-            alert("Your dicsount is 25%");
-            alert("Your amount is ");
-            break;
-        case 4:
-            alert("Your number is 3");
-            alert("Your dicsount is 35%");
-            alert("Your amount is 50")
-            break;
-        case 5:
-            alert("Your number is 4");
-            alert("Your dicsount is 50%");
-            alert("Your amount is ");
-            break;
-        case 6:
-            alert("Your number is 5");
-            alert("Your discount is 100%");
-            alert("Your amount is ");
-            break;
-    } return (calculateTotal() + "dollars")
-}
-console.log(calculateTotal(5));
+// function calculateTotal (luckyNumber,discountedPrice){
+//     var luckyNumber
+//     var discountedPrice
+//     switch (luckyNumbercdcd){
+//         case 1:
+//             alert("Your number is 0");
+//             alert("You get no discount");
+//             alert("Total amount is")
+//             break;
+//         case 2:
+//             alert("Your number is 1");
+//             alert("Your dicsount is 10%");
+//             alert("");
+//             break;
+//         case 3:
+//             alert("Your number is 2");
+//             alert("Your dicsount is 25%");
+//             alert("Your amount is ");
+//             break;
+//         case 4:
+//             alert("Your number is 3");
+//             alert("Your dicsount is 35%");
+//             alert("Your amount is 50")
+//             break;
+//         case 5:
+//             alert("Your number is 4");
+//             alert("Your dicsount is 50%");
+//             alert("Your amount is ");
+//             break;
+//         case 6:
+//             alert("Your number is 5");
+//             alert("Your discount is 100%");
+//             alert("Your amount is ");
+//             break;
+//     } return (calculateTotal() + "dollars")
+// }
+// console.log(calculateTotal(5));
 
 // function analyzeColor(color) {
 //     switch (color) {
@@ -196,7 +196,17 @@ console.log(calculateTotal(5));
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
-
-function numberTest(){
-window.close
+function conditions(x){
+    var plus = x + 100
+        confirm(`Would you like to enter a number?`)
+    var x = prompt(`What's your number?`)
+    if (x % 2 === 0) {
+        return "even";
+    }else{
+        alert(`Your number is odd!`)
+    };
+    alert(`You number plus 100 is ${plus}.`);
+    alert(`You number is also positive`);
+    window.close
 }
+// console.log(conditions(4))

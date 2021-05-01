@@ -1,4 +1,4 @@
-(function() {
+// (function() {
     "use strict";
 // var numberToStopAt = 65536;
 // for (var i = 2; i < 7000000; i *= 2) {
@@ -45,27 +45,29 @@ var numberToStopAt = 65536;
 //     }
 //     counter += 1;
 // }
+var allCones = Math.floor(Math.random() * 50) + 50;
+Math.floor(Math.random() * 5) + 1;
 
-   // function getStartingCones(){
-   //     return  Math.floor(Math.random() * 50) + 50;
-   // }
-   //  function getWantedCones(){
-   //      return Math.floor(Math.random() * 5) + 1;
-   //  }
-   //  function sellIceCreamCones() {
-   //      do {
-   //          var wantedCones = getWantedCones();
-   //          if (wantedCones > getStartingCones()) {
-   //              console.log("I'm sorry, you wanted " + wantedCones + " cones, but we only have " + allCones)
-   //              continue;
-   //          }
-   //          console.log(`Here is ${wantedCones}. Enjoy`);
-   //          // getStartingCones() -= wantedCones;
-   //          console.log(`We have ${allCones} remaining`);
-   //      } while (allCones > 0)
-   //      console.log(`We've sold out of cones for the day`);
-   //  }
-   //
-   //      sellIceCreamCones(getStartingCones())
+   function getStartingCones(){
+       return  Math.floor(Math.random() * 50) + 50;
+   }
+    function getWantedCones(){
+        return Math.floor(Math.random() * 5) + 1;
+    }
+    function sellIceCreamCones() {
+        do {
+            var wantedCones = getWantedCones();
+            if (wantedCones < getStartingCones()) {
+               return console.log("I'm sorry, you wanted " + wantedCones + " cones, but we only have " + allCones)
+                continue;
+            }
+            return console.log(`${wantedCones} cones sold`);
+            getStartingCones() -= wantedCones;
+           return console.log(`Cannot sell you 6 cones I only have ${allCones}`);
+        } while (allCones > 0)
+        console.log(`Yay! I sold them all`);
+    }
 
-    })()
+        sellIceCreamCones(getStartingCones())
+
+    // })()

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Forms Lecture</title>
+    </head>
+    <body>
+        <!--        <h1>Bab's First Form</h1>-->
+        <!--<form method="POST" action="https://request-inspector.glitch.me">-->
+        <!--    <input id="username" name="username" type="text" placeholder="Enter Username">-->
+        <!--    <input type="submit" value="You just want to push my button">-->
+        <!--    <button>Submit</button>-->
+        <!--</form>-->
+        <!--        <form method="GET" action="https://request-inspector.glitch.me">-->
+
+        <!--        <input id="username" name="user" type="text" placeholder="Enter Username">-->
+        <!--        <br>-->
+        <!--        <button>Submit To Your Benevolent Overlords</button>-->
+
+        <!--        </form>-->
+
+        <form method="POST" action="https://request-inspector.glitch.me" >
+            <div>
+                <input type="email-input" name="email" type="email" placeholder="email" required>
+            </div>
+            <div>
+                <input type="password-input" name="password" type="password" placeholder="password" required>
+                <input id="role-student" name="role" type="radio" value="">
+                <label for="role-student">Student</label>
+                <input id="role-instructor" name="role" type="radio" value="instructor">
+                <label for="role-instructor">Instructor</label>
+                <input id="isActive" name="isActive" type="checkbox" value="1">
+                <label for="isActive">Is Active</label>
+            </div>
+            <div>
+                <select name="currentModule" id="currentModule" onchange="this.options(this.selectedIndex"></select>
+            </div>
+            <button>Login</button>
+        </form>
+    </body>
+</html>

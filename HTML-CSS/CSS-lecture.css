@@ -1,17 +1,12 @@
-.fancy-header{
-    color:blue;
-    text-decoration:underline;
-}
-
 selector{
     property: value
     /* :color, front size, background color)*/
 }
 
-hi {
-    color:blue;
+h1 {
+    color:red;
     front-size;
-    border: 2px; color:magenta;
+    border: 2px; color:megenta;
 }
 p{
     color: coral;

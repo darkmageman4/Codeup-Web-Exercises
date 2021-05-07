@@ -95,7 +95,7 @@ a {
     border-bottom-color: var(--separator-color);
     padding: .5em;
     overflow: scroll;
-    /*display: flex;*/
+    display: inline-block;
 }
 
 .img-circle{
@@ -103,13 +103,13 @@ a {
 }
 .media-image{
     width: 50px;
-    float: left;
+    /*float: left;*/
     margin: 1.33em;
     /*flex-direction: column;*/
-    display: inline-block;
+    /*display: inline-block;*/
 }
 .media-body{
-    width: 100%;
+    /*width: 100%;*/
     border-bottom: 1em;
     /*float: left;*/
     /*flex-direction: row;*/

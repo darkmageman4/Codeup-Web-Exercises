@@ -6,8 +6,41 @@ body, html {
     font-family: Arial, Ubuntu, sans-serif;
 }
 
-div{
-    width: 200px;
-    border: orangered;
-    /*font-weight: bold;*/
+.message-info{
+    padding: 10px;
+    border: 1px solid blue;
+    margin: 10px;
+    background-color: #CDDFFF;
+    color: #5243C6;
+    border-radius: 10px;
 }
+.message-success{
+    padding: 10px;
+    border: 1px solid green;
+    margin: 10px;
+    background-color: #CFF3DB;
+    color: #009300;
+    border-radius: 10px;
+
+}
+
+.message-warning{
+    padding: 10px;
+    border: 1px solid yellow;
+    margin: 10px;
+    background-color: #FCFBC9;
+    color: #A98200;
+    border-radius: 10px;
+
+}
+
+.message-error{
+    padding: 10px;
+    border: 1px solid red;
+    margin: 10px;
+    background-color: #FAD4D8;
+    color: #B01949;
+    border-radius: 10px;
+
+}
+

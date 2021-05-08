@@ -46,18 +46,18 @@
      */
 
     var shoppers = [
-            {name: 'Cameron', amount: 180},
-            {name: 'Ryan', amount: 250},
-            {name: 'George', amount: 320},
-];
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320},
+    ];
     // console.log(shoppers[0].name);
     shoppers.forEach(discount);
 
 
-    function discount(shopper){
+    function discount(shopper) {
 
         console.log(`${shopper.name} total amount is ${shopper.amount}`);
-        if(shopper.amount >= 200){
+        if (shopper.amount >= 200) {
             var discount = shopper.amount * .12;
             var total = shopper.amount - discount;
             console.log(`This is you amount after your discount ${total}`);
@@ -80,28 +80,44 @@
 
     var books = [
         {
-            "title": "Genetic Algorithms and Machine Learning for Programmers",
-            "price": 36.99,
-            "author": "Frances"
-            Buontempo"
+            title: "Genetic Algorithms and Machine Learning for Programmers",
+            author: {
+                firstName: "Frances",
+                lastName: "Law",
+            }
         },
         {
-            "title": "The Visual Display of Quantitative Information",
-            "price": 38.00,
-            "author": "Edward Tufte"
+            title: "The Visual Display of Quantitative Information",
+            author: {
+                firstName:"Edward",
+                lastName: "Tufte",
+            }
         },
         {
-            "title": "Practical Object-Oriented Design",
-            "author": "Sandi Metz",
-            "price": 30.47
+            title: "Practical Object-Oriented Design",
+            author: {
+                firstName:"Sandi",
+                lastName: "Metz",
+            },
         },
         {
-            "title": "Weapons of Math Destruction",
-            "author": "Cathy O'Neil",
-            "price": 17.44
-        }
+            title: "Weapons of Math Destruction",
+            author: {
+                firstName: "Cathy",
+                lastName: "O'Neil",
+            }
+        },
+        {
+            title: "Codeup",
+            author: {
+                firstName: "Casey",
+                lastName: "Edwards",
+            }
+        },
     ]
-    console.log(books[0].title) // "The Salmon of Doubt"
+    console.log(books[0].title)
+    console.log(books[0].author.firstName)
+    console.log(books[0].author.lastName)
 
     /**
      * TODO:
@@ -128,7 +144,10 @@
      *      ...
      */
 
-    /**
+    for (let key in books) {
+        console.log("Book # " + key, books[key]);
+    }
+        /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
      *   name and returns a book object with the properties described
@@ -138,5 +157,6 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
 
 })();

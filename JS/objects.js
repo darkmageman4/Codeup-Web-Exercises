@@ -1,4 +1,4 @@
-(function() {
+(function () {
     "use strict";
 
     /**
@@ -11,12 +11,12 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-// var person = {
-//         firstname: "Wagner",
-//         lastname: "Charles",
-//     }
-//     console.log(person.firstname);
-//     console.log(person.lastname);
+    var person = {
+        firstname: "Wagner",
+        lastname: "Charles",
+    }
+    console.log(person.firstname);
+    console.log(person.lastname);
 
     /**
      * TODO:
@@ -27,10 +27,10 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
-    // person.sayHello = function (){
-    //     return 'Hello from ' + this.firstname + " " + this.lastname;
-    // }
-    // console.log(person.sayHello());
+    person.sayHello = function () {
+        return 'Hello from ' + this.firstname + " " + this.lastname;
+    }
+    console.log(person.sayHello());
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
      * more than $200. If a shopper spends more than $200, they get a 12%
@@ -44,50 +44,25 @@
      * represents one shopper. Use a foreach loop to iterate through the array,
      * and console.log the relevant messages for each person
      */
+
     var shoppers = [
-        {name: 'Cameron', amount: 180},
-        {name: 'Ryan', amount: 250},
-        {name: 'George', amount: 320}
-    ];
-    console.log(shoppers[0].name);
+            {name: 'Cameron', amount: 180},
+            {name: 'Ryan', amount: 250},
+            {name: 'George', amount: 320},
+];
+    // console.log(shoppers[0].name);
+    shoppers.forEach(discount);
 
-    function discount(){
-        if (shoppers > 200) {
-            console.log("You get a 12% discount");
-        } else {
-            console.log("No discount for you!");
-        return
+
+    function discount(shopper){
+
+        console.log(`${shopper.name} total amount is ${shopper.amount}`);
+        if(shopper.amount >= 200){
+            var discount = shopper.amount * .12;
+            var total = shopper.amount - discount;
+            console.log(`This is you amount after your discount ${total}`);
         }
-    }console.log(discount())
-
-
-
-
-
-//     var shoppers = [
-//         {
-//         features: {
-//             name: 'Cameron',
-//             amount: 180
-//             }
-//         },
-//         {
-//             features:{
-//             name: 'Ryan',
-//             amount: 250
-//             }
-//         },
-//     {
-//         feeatures: {
-//         name: 'George',
-//         amount: 320,
-//         }
-//     }
-// ];
-
-    // If a shopper spends more than $200, they get a 12%
-    // * discount.
-
+    }
 
 
     /** TODO:
@@ -102,6 +77,31 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+    var books = [
+        {
+            "title": "Genetic Algorithms and Machine Learning for Programmers",
+            "price": 36.99,
+            "author": "Frances"
+            Buontempo"
+        },
+        {
+            "title": "The Visual Display of Quantitative Information",
+            "price": 38.00,
+            "author": "Edward Tufte"
+        },
+        {
+            "title": "Practical Object-Oriented Design",
+            "author": "Sandi Metz",
+            "price": 30.47
+        },
+        {
+            "title": "Weapons of Math Destruction",
+            "author": "Cathy O'Neil",
+            "price": 17.44
+        }
+    ]
+    console.log(books[0].title) // "The Salmon of Doubt"
 
     /**
      * TODO:

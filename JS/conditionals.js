@@ -209,4 +209,4 @@ function conditions(x){
     alert(`You number is also positive`);
     window.close
 }
-// console.log(conditions(4))
+console.log(conditions(4))

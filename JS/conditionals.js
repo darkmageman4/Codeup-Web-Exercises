@@ -19,23 +19,24 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
-// function analyzeColor(color){
-//     if (color === "blue"){
-//         return "blue is the color of the sky";
-//     } else if (color === "red")
-//     {
-//         return "Strawberries are red";
-//     }
-//     else if (color === "cyan")
-//     {
-//         return "I don't know anything about cyan";
-//     }else {
-//         return "I don't know that color bro!";
-//     }
-//
-// }
-//
-// console.log(analyzeColor("blue"));
+function analyzeColor(color){
+    if (color === "blue"){
+        return "blue is the color of the sky";
+    } else if (color === "red")
+    {
+        return "Strawberries are red";
+    }
+    else if (color === "cyan")
+    {
+        return "I don't know anything about cyan";
+    }
+    else {
+        return "I don't know that color bro!";
+    }
+
+}
+
+console.log(analyzeColor("blue"));
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -49,7 +50,7 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Pass the `randomColor` variable to your function and console.log the results.
  * You should see a different message every time you refresh the page
  */
-// analyzeColor(randomColor);
+analyzeColor(randomColor);
 
 /**
  * TODO:
@@ -65,6 +66,7 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 //             break;
 //         default:
 //             return " I don't know anything about that" + color;
+//                 break;
 //     }
 // }
 //
@@ -76,18 +78,10 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * function to show it to the user.
  */
 
-/* ########################################################################## */
-// function getColor() {
-//     return prompt("What color?");
-//
-//     function theAlert() {
-//         analyzeColor(getColor());
-//         return getColor();
-//     }
-//     return
-// }
-// console.log(getColor("blue"));
 
+var favoriteColor = prompt("What color?");
+analyzeColor(favoriteColor);
+    alert(analyzeColor())
 /**
  * TODO:
  * Suppose there's a promotion in Walmart, each customer is given a randomly
@@ -196,17 +190,17 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
-function conditions(x){
-    var plus = x + 100
-        confirm(`Would you like to enter a number?`)
-    var x = prompt(`What's your number?`)
-    if (x % 2 === 0) {
-        return "even";
-    }else{
-        alert(`Your number is odd!`)
-    };
-    alert(`You number plus 100 is ${plus}.`);
-    alert(`You number is also positive`);
-    window.close
-}
-console.log(conditions(4))
+// function conditions(x){
+//     let plus = x + 100
+//         confirm(`Would you like to enter a number?`)
+//     let x = prompt(`What's your number?`)
+//     if (x % 2 === 0) {
+//         return "even";
+//     }else{
+//         alert(`Your number is odd!`)
+//     };
+//     alert(`You number plus 100 is ${plus}.`);
+//     alert(`You number is also positive`);
+//     window.close
+// }
+// console.log(conditions(4))

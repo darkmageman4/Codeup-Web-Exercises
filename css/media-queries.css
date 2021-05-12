@@ -2,16 +2,29 @@
 
 @media screen and (min-width: 934px) {
 
-        body{
-            display: flex;
-        }
+    /*body{*/
+    /*    display: flex;*/
+    /*    flex-flow: wrap;*/
+    /*}*/
+
+    .alert-info{
+        display: none;
+    }
+
     nav{
         display: flex;
+        justify-items: flex-end;
+        width: 100%;
     }
 
     .nav-links{
         display: flex;
-        flex-direction: row;
+        list-style: none;
+    }
+
+
+    section{
+        flex-flow: wrap;
     }
 
 

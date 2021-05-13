@@ -38,20 +38,22 @@
 // for(var i = 1 ; i >= 0; i -= 5) {
 //     console.log(i)
 // }
-
-// for(let i = 1; i <= 9; i++) {
-//     var numberFour = []
-//     for (let x = 1; x <= i; x++) {
-//         numberFour.push(i);
-//     }
-//     console.log(numberFour.join(""));
-// }
+//
+for(let i = 1; i <= 9; i++) {
+    var numberFour = []
+    for (let x = 1; x <= i; x++) {
+        numberFour.push(i);
+    }
+    console.log(numberFour.join(""));
+}
 
 // function repeat() {
 //     for (let i = 1; i <= 9; i++) {
 //         console.log(i.toString().repeat(i));
 //     }
 // }
+//
+// console.log(repeat(2))
 // TODO: Number 5
 // for(var i = 100 ; i >= 0; i -= 5) {
 //     console.log(i);

@@ -1,0 +1,20 @@
+/*@media screen and  (max-width: 1000px){*/
+/*    .jumbotron{*/
+/*        display: none;*/
+/*    }*/
+/*}*/
+
+.pizza {
+    position:relative;
+}
+
+.display-4 {
+    left: 0;
+    position:absolute;
+    text-align:center;
+    top: 250px;
+    width: 100%;
+    background-color: white ;
+    opacity: 0.5;
+    color: black;
+}

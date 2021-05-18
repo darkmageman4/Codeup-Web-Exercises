@@ -191,8 +191,12 @@
 //     } else
 //         return false
 // }
-
-
+//     var b = [1,2,true,4]
+//
+// function secondToLast(a){
+//     return typeof a[a.length - 2]
+// }
+//     console.log(secondToLast(b))
 
 
 })();

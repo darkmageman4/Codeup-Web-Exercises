@@ -108,16 +108,23 @@ function jungleJuice() {
 function blueKnuckles() {
     document.getElementById("test")
         .appendChild(squarePants());
-}
+  // removeThemAll();
+    }
 
 function squarePants() {
 
     let ruby = document.createElement("img");
+    // var scratchTickets = document.getElementById(`bigHead`)
     ruby.setAttribute("src", "kodak/pizza.png");
     ruby.setAttribute("class", "col-12 col-sm-6 col-md-4 px-0");
     ruby.setAttribute("class", "col-12");
+    // scratchTickets.classList.replace(`search`,"Get to The Choppa");
+
 
     return ruby;
 }
 
-
+// function removeThemAll(){
+//     let bigHead = document.getElementById("bigHead")
+//     bigHead.removeEventListener("click",blueKnuckles)
+// }

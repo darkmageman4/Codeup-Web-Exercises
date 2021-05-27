@@ -29,33 +29,33 @@ const shoppingCart = {
     ]
 }
 
-// function getAverageItemPrice(shoppingCart1) {
-//     let shoppingCart = shoppingCart1.items.reduce(function (acc, curr) {
-//         return acc + curr.price / 5;
-//     }, 0);
-//     return (shoppingCart)
-// }
-//
-// console.log(getAverageItemPrice(shoppingCart1))
+function getAverageItemPrice1(shoppingCart) {
+    let jungleJuice = shoppingCart.items.reduce(function (acc, curr) {
+        return acc + curr.price / 5;
+    }, 0);
+    return (jungleJuice)
+}
+
+// console.log(getAverageItemPrice1(shoppingCart))
 
 
 
-// function getAverageItemPrice() {
-//     let shop = [shoppingCart.items[0].price,
-//         shoppingCart.items[1].price,
-//         shoppingCart.items[2].price,
-//         shoppingCart.items[3].price,
-//         shoppingCart.items[4].price];
-//
-//     let avg = 0;
-//
-//     for (let i = 0; i < shop.length; i++) {
-//         avg += shop[i]/5;
-//     }
-//     return avg
-// }
-//
-// console.log(getAverageItemPrice(shoppingCart))
+function getAverageItemPrice() {
+    let shop = [shoppingCart.items[0].price,
+        shoppingCart.items[1].price,
+        shoppingCart.items[2].price,
+        shoppingCart.items[3].price,
+        shoppingCart.items[4].price];
+
+    let avg = 0;
+
+    for (let i = 0; i < shop.length; i++) {
+        avg += shop[i]/5;
+    }
+    return avg
+}
+
+console.log(getAverageItemPrice(shoppingCart))
 
 // let shoppingCart = [{
 //     product: 'phone',
@@ -73,9 +73,13 @@ const shoppingCart = {
 //         price: 20.99
 //     }
 // ];
-//
+
 let total = shoppingCart.items.reduce(function (acc, curr) {
     return acc + curr.quantity * curr.price /5;
 },0);
 
-console.log(total);
+// console.log(total);
+
+function  getAverageSpentPerItem(){
+
+}

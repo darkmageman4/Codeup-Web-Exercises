@@ -21,7 +21,6 @@
         var dbid = listItems[i].getAttribute(`data-dbid`);
         console.log(dbid);
     }
-
     // TODO: Set text color on every other list item to grey
     for (var i = 0; i < listItems.length; i += 2) {
         var greyToes = listItems[i].style.color = "#787878";
@@ -38,7 +37,7 @@
     subParagraphs.innerHTML = "Mission Accomplished!";
 
 
-    //Event Listener
+    // Event Listener
 
     var listener1 = function (event) {
         mainHeader.innerHTML = `JavaScript is for Tools`;
@@ -50,9 +49,10 @@
         ruby.setAttribute("class", "col-12");
     }
     var listener3 = function (event) {
+        mainHeader.innerHTML = `Too Cool for School`;
     }
     var listener4 = function (event) {
-        bodyElement.style.color = `#381048`;
+        mainHeader.innerHTML = `Girls just wanna have fun`;
     }
 
     var btn1 = document.getElementById(`btn1`);
@@ -65,21 +65,29 @@
     btn3.addEventListener("click", listener3);
 
     var btn4 = document.getElementById(`btn4`);
-    btn4.addEventListener("keyup", listener4);
+    btn4.addEventListener("click", listener4);
+
+document.body.onload = addElement;
+    function addElement () {
+        // create a new div element
+        const newDiv = document.createElement("div");
+
+        // and give it some content
+        const newContent = document.createTextNode("New Buttons should above below this!");
+
+        // add the text node to the newly created div
+        newDiv.appendChild(newContent);
+
+        // add the newly created element and its content into the DOM
+        const currentDiv = document.getElementById("div1");
+        document.body.insertBefore(newDiv, currentDiv);
+    }
+
+    var btn = document.createElement("BUTTON");   // Create a <button> element
+    btn.innerHTML = "CLICK ME1";                   // Insert text
+    document.body.appendChild(btn);               // Append <button> to <body>
+    var searchLink = document.getElementsByTagName("BUTTON")[0];
+    searchLink.setAttribute("class", "btn btn-default");
+
 
 })();
-
-function replace(){
-
-}
-// Create a new text node called "Water"
-var textnode = document.createTextNode("Water");
-
-// Get the first child node of an <ul> element
-var item = document.getElementById("btn3");
-console.log(item.innerText);
-
-// Replace the first child node of <ul> with the newly created text node
-item.replaceChild(textnode, item.childNodes[0]);
-
-// Note: This example replaces only the Text node "Coffee" with a Text node "Water"

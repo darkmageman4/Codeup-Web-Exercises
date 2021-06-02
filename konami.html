@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Konami Code</title>
+    </head>
+    <body>
+        <h1>Konami Code</h1>
+
+        <p>
+            Click somewhere in the output box [here] to ensure focus.<br>
+            Then enter the following code using your keyboard:
+        </p>
+
+        <p class="code">
+            <span>&uarr;</span>
+            <span>&uarr;</span>
+            <span>&darr;</span>
+            <span>&darr;</span>
+            <span>&larr;</span>
+            <span>&rarr;</span>
+            <span>&larr;</span>
+            <span>&rarr;</span>
+            <span>B</span>
+            <span>A</span>
+        </p>
+
+        <script src="JS/jquery.js"></script>
+        <script>
+            "use strict";
+
+            $(document).keyup(function(event){
+                console.log(event.keyCode);
+            });
+
+
+
+        </script>
+    </body>
+</html>

@@ -1,6 +1,9 @@
-<!--TODO: Find a way to display the text from the input to the div with id 'post-container' when a user clicks the search button-->
+(function () {
+    "use strict";
+
+    <!--TODO: Find a way to display the text from the input to the div with id 'post-container' when a user clicks the search button-->
 //call function
-searchFor();
+    searchFor();
 
 // id for BTN
     function searchFor() {
@@ -17,9 +20,13 @@ searchFor();
     }
 
     <!--TODO: When the text is displayed, set the font/size/weight using the DOM (Vanilla JS or jQuery)-->
-document.getElementById("post-container").style.color = "#ff0000";
-document.getElementById("post-container").font. = "bold";
-document.getElementById("post-container").style.font =
+    document.getElementById("post-container").style.color = "#ff0000";
+    document.getElementById("post-container").font.style = "bold";
+    document.getElementById("post-container").style.font = "100px";
+
+})();
+
+
 
 
 

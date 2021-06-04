@@ -95,16 +95,17 @@ document.addEventListener('keydown', function(e) {
 });
 
 function activateCheats() {
-    // var up = document.getElementById('GFG_UP');
-    // up.innerHTML = "Click on the button to add image element";
+    // var up = document.getElementById('this-is-it');
+    // focus.innerHTML = "Click on the button to add image element";
     // var down = document.getElementById('this-is-it');
     var img = new Image();
     img.src = "kodak/konami-games.jpg"
     document.getElementById('this-is-it').appendChild(img);
-    // down.innerHTML = "Image Element Added.";
+    // leave.innerHTML = "Image Element Added.";
     var audio = new Audio('kodak/wolves.mp3');
     // $('audio#music'.play()
     audio.play();
+    audio.volume = 0.1;
     alert("Konami Code Activate!");
 // document.body.style.backgroundImage = "('kodak/konami-games.jpg')";
 }

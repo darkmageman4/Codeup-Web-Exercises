@@ -11,17 +11,33 @@
     }
     addClickEvents(jqElements, backgroundReset, backgroundBlue);
     addClickEvents($(".card"), "", "red");
-    //make sure the DOM is loaded first
-    document.addEventListener("DOMContentLoaded", function() {
-        addListeners();
-    });
+    // make sure the DOM is loaded first
+    // document.addEventListener("DOMContentLoaded", function() {
+    //     addListeners();
+    // });
+    $(document).ready(function(addListeners);
+
     //parent method for adding all listeners
-    function addListeners(){
+    function addListeners() {
         //get the elements to add listener and change image
-        let cardContainers = Array.from(document.querySelectorAll(".col-md-3"));
-        addEvents(cardContainers, 'assets/jazz-music-rubber-duck.jpg', 'mouseover');
-        addEvents(cardContainers, 'assets/300x300.png', 'mouseout');
-    }
+        // let cardContainers = Array.from(document.querySelectorAll(".col-md-3"));
+        // addEvents(cardContainers, 'kodak/jazz-music-rubber-duck.jpg', 'mouseover');
+        // addEvents(cardContainers, 'kodak/300x300.png', 'mouseout');
+
+        // $( "#greatphoto" ).attr( "alt", "Beijing Brush Seller" );
+        let cardContainers = $(".col-md-3");
+addEvents(cardContainers,"kodak/jazz-music-rubber-duck.jpg","kodak/jazz-music-rubber-duck.jpg")
+    )
+    //     $('.col-md-3').hover(
+    //         function () {
+    //             $(this).mouseenter( "kodak/jazz-music-rubber-duck.jpg");
+    //         },
+    //         function () {
+    //             $(this).mouseleave("kodak/question.png");
+    //         }
+    //     );
+    // }
+
     //add mouseover/mouseout events to all selected elements
     function addEvents(cardContainers, imgPath, listenerType){
         cardContainers.forEach((cc) => {

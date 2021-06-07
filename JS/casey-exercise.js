@@ -109,14 +109,31 @@
 // -> ALSO, change the background of the li to a new color
 // -> When the li is clicked again, reset the li background color to its original color
 // -> Don't worry about changing the text back
-//     let clickOn = function () {
-        $(".list-group-item").click(function (){
-            $(this).addClass("capitalise").css("background","red")
-                // .toggleClass("color");
+//     let changeTheText = function () {
+//         $(".list-group-item").click(function (){
+//             $(this).addClass("capitalise").css("background","red")
+//                 // .toggleClass("color");
      // });
     // $("button").click(function(){
     //     $(this).css('background-color', isButtonBlue ? 'red' : 'blue');
     // isButtonBlue = !isButtonBlue;
-});
+// });
 
+    // TODO: Change up the submit button event
+//  -> Add a new input with an id of #redirect-url
+//  -> Remove the old click events from #submitBtn
+//  -> When the user clicks #submitBtn, redirect the page to the value of #redirect-url
+//  -> HINT: You can either add a new input or change the id of an existing input element to #redirect-url to save time
+$("#submitBtn").click(function(){
+    //     let link = $( "em" ).attr( "value" );
+    // ("#submitBtn").click(function (){
+    // link.addEventListener('click', link);
+    // }
+    // window.location.href = "https://www.tutorialrepublic.com/";
+    let newSite = $("#redirect-url").val();
+    window.location.assign(newSite);
+    console.log(newSite)
+})
+// TODO: After a 2 second delay (BOM), when the user loads the page, change #main-title to a value of your choosing (change text, background color, what have you)!
+    setTimeout(2000)
 })();

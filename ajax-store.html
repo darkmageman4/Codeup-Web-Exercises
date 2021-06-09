@@ -29,7 +29,7 @@
                 $.ajax('data/inventory.json', {
                     type: "GET"
                 }).done(function (data) {
-                    // console.log(data)
+                    console.log(data)
                 })
                 // TODO: Take the data from inventory.json and append it to the products table
                 //       HINT: Your data should come back as a JSON object; use console.log() to inspect
@@ -50,26 +50,26 @@
                 //     .then((json) => console.log(json));
                 // json.append($("#insertProducts"))
                 //     (this).append($("insertProducts"))
-                function milkyWay() {
-                    $.ajax('data/inventory.json', {
-                        type: "GET"
-                    }).done(function (data) {
-                        $("#insertProducts").html("")
-                        for (let product of data) {
-                            let dumbStick = `
-                        <tr>
-                            <td>${product.title}</td>
-                            <td>${product.quantity}</td>
-                            <td>${product.categories}</td>
-                            <td>${product.price}</td>
-                        </tr> `
-                            $("#insertProducts").append(dumbStick)
-                        }
-                    })
-                }
-                $(".submitBTN").click(function () {
-                    milkyWay()
-                })
+            //     function milkyWay() {
+            //         $.ajax('data/inventory.json', {
+            //             type: "GET"
+            //         }).done(function (data) {
+            //             $("#insertProducts").html("")
+            //             for (let product of data) {
+            //                 let dumbStick = `
+            //             <tr>
+            //                 <td>${product.title}</td>
+            //                 <td>${product.quantity}</td>
+            //                 <td>${product.categories}</td>
+            //                 <td>${product.price}</td>
+            //             </tr> `
+            //                 $("#insertProducts").append(dumbStick)
+            //             }
+            //         })
+            //     }
+            //     $(".submitBTN").click(function () {
+            //         milkyWay()
+            //     })
             })();
         </script>
         <script src="JS/ajax-store.js"></script>

@@ -113,10 +113,10 @@
 //         $(".list-group-item").click(function (){
 //             $(this).addClass("capitalise").css("background","red")
 //                 // .toggleClass("color");
-     // });
-    // $("button").click(function(){
-    //     $(this).css('background-color', isButtonBlue ? 'red' : 'blue');
-    // isButtonBlue = !isButtonBlue;
+//      });
+//     $("button").click(function(){
+//         $(this).css('background-color', isButtonBlue ? 'red' : 'blue');
+//     isButtonBlue = !isButtonBlue;
 // });
 
     // TODO: Change up the submit button event
@@ -124,16 +124,31 @@
 //  -> Remove the old click events from #submitBtn
 //  -> When the user clicks #submitBtn, redirect the page to the value of #redirect-url
 //  -> HINT: You can either add a new input or change the id of an existing input element to #redirect-url to save time
-$("#submitBtn").click(function(){
+// $("#submitBtn").click(function(){
     //     let link = $( "em" ).attr( "value" );
     // ("#submitBtn").click(function (){
     // link.addEventListener('click', link);
     // }
     // window.location.href = "https://www.tutorialrepublic.com/";
-    let newSite = $("#redirect-url").val();
-    window.location.assign(newSite);
-    console.log(newSite)
-})
+    // let newSite = $("#redirect-url").val();
+    // window.location.assign(newSite);
+    // console.log(newSite)
+// })
 // TODO: After a 2 second delay (BOM), when the user loads the page, change #main-title to a value of your choosing (change text, background color, what have you)!
-    setTimeout(2000)
+//     setTimeout(2000)
+
+    // TODO: When the user clicks #submitBtn, log to the console the values of #first, #last, and #handleField
+//  -> If any of the fields are empty, alert the user to fill the empty control (be sure to tell them which control was empty)
+// getNames()
+//     function getNames() {
+//         let persons = {
+//             firstName: $(`#first`).val(),
+//             lastName: $('#last').val(),
+//             handle: $('#handleField').val(),
+//         }
+//         $("#submitBtn").click(function () {
+//             console.log(persons)
+//         })
+//     }
+
 })();

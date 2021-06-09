@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Online Store</title>
+    </head>
+    <body>
+
+        <h1>My Tool Store</h1>
+
+        <table id="products">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Categories</th>
+                </tr>
+            </thead>
+            <tbody id="insertProducts"></tbody>
+        </table>
+        <button class="submitBTN">CLick Me!</button>
+
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+                integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <script>
+            (function () {
+                "use strict";
+                // TODO: Create an AJAX GET request for the file under data/inventory.json
+                $.ajax('data/inventory.json', {
+                    type: "GET"
+                }).done(function (data) {
+                    // console.log(data)
+                })
+                // TODO: Take the data from inventory.json and append it to the products table
+                //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+                //             its contents and fields
+                //       HINT: You will want to target #insertProducts for your new HTML elements
+                // fetch('data/inventory.json', {
+                //     method: 'POST',
+                //     body: JSON.stringify({
+                //         title: 'foo',
+                //         body: 'bar',
+                //         userId: 1,
+                //     }),
+                //     headers: {
+                //         'Content-type': 'application/json; charset=UTF-8',
+                //     },
+                // })
+                //     .then((response) => response.json())
+                //     .then((json) => console.log(json));
+                // json.append($("#insertProducts"))
+                //     (this).append($("insertProducts"))
+                function milkyWay() {
+                    $.ajax('data/inventory.json', {
+                        type: "GET"
+                    }).done(function (data) {
+                        $("#insertProducts").html("")
+                        for (let product of data) {
+                            let dumbStick = `
+                        <tr>
+                            <td>${product.title}</td>
+                            <td>${product.quantity}</td>
+                            <td>${product.categories}</td>
+                            <td>${product.price}</td>
+                        </tr> `
+                            $("#insertProducts").append(dumbStick)
+                        }
+                    })
+                }
+                $(".submitBTN").click(function () {
+                    milkyWay()
+                })
+            })();
+        </script>
+        <script src="JS/ajax-store.js"></script>
+    </body>
+</html>

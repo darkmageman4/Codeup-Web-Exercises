@@ -9,15 +9,44 @@
     </head>
     <body>
         <div id="post"></div>
-        <script src="https://code.jquery.com/jquery-2.2.4.min.js"integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+                integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
         <script>
             (function () {
                 "use strict";
-                $.ajax('data/blog.json', {
-                    type: "GET"
-                }).done(function (data) {
-                    console.log(data)
+                $.ajax({
+                    type: "GET",
+                    // data: {word: word},
+                    dataType: "json",
+                    url: "data/blog.json",
+                    success: function (data) {
+                        // $("#post").append(JSON.stringify(data))
+
+                        // $("#post").html(data.title)
+
+                        // var myBlog = `
+                        //     ${data.table}
+                        //     ${data.content}
+                        //     ${data.categories}
+                        //     ${data.data}`
+                        // $("#movie-data").html(myBlog);
+
+                        // for(var key in data) {
+                        //     var value = data[key];
+                        //     html+='<div>'+key+':'+value+'</div>'
+                        // }
+                        // $("#movie-data").append(html);
+
+                        // if (data.length > 0) {
+                        //     $.each(data, function(i, item) {
+                        //         var result = "<strong>" + data[i].word + '</strong> - ' + data[i].text;
+                        //     });
+                        // } else {
+                        //     var results = "<strong>" + data.word + '</strong> - ' + "not found"
+                        // }
+                        // $('div#text-container').append(result);
+                    }
                 })
             })();
 

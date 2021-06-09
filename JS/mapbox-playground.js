@@ -19,6 +19,7 @@ addMapEvent(marker)
 let geocoder = setGeoCoder();
 addGeocoderToMap(geocoder)
 addGeocoderEvent(event)
+setPopUp("This is my popup!")
 
     function setGeoCoder() {
         return new MapboxGeocoder({
@@ -36,8 +37,8 @@ function addGeocoderToMap (geocoder){
 }
 
 function addGeocoderEvent(){
-    geocoder.on("result", function(e){
-        marker.setLngLat(e.result.geometry.coordinates)
+    geocoder.on("result", function(event){
+        marker.setLngLat(event.result.geometry.coordinates)
     })
 
 }
@@ -53,3 +54,11 @@ function addMapEvent() {
         marker.setLngLat(e.lngLat).addTo(map);
     })
 }
+
+function setPopUp(textDetails){
+    let popup = new mapboxgl.Popup().setHTML(`<p>${textDetails}</p>`)
+        .addTo(map);
+    marker.setPopup(popup);
+}
+//.place_name works
+//.name

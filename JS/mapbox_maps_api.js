@@ -1,4 +1,6 @@
-const token = "pk.eyJ1IjoiZGFya21hZ2VtYW40IiwiYSI6ImNrcHBtdzM2OTAya3oycXB0NjUyd2FwbGQifQ.ZxkFur5nI3aJZ19VNyDMFA"
+// (function () {
+
+    const token = "pk.eyJ1IjoiZGFya21hZ2VtYW40IiwiYSI6ImNrcHBtdzM2OTAya3oycXB0NjUyd2FwbGQifQ.ZxkFur5nI3aJZ19VNyDMFA"
 // const mapbox = "pk.eyJ1IjoiZGFya21hZ2VtYW40IiwiYSI6ImNrcHBuOGFpZDBmbWcycG8zd2c3dmZ3bHcifQ.HqDUwrNGbHgUvPBRaRSzGA"
 
 mapboxgl.accessToken = token;
@@ -10,6 +12,7 @@ var map = new mapboxgl.Map({
     //[-80.1918, 25.7617],
     zoom: 15,
 })
+console.log(map.zoom)
 
 //call function to give method and initial pointer
 let marker = setMarker(
@@ -77,7 +80,7 @@ function setPopUp(textDetails) {
 
     var jjGourment = {
         address: "JJ Gourment",
-        popupHTML: "<p>Welcome to JJ's</p>"
+        popupHTML: "<p>Welcome to JJ</p>"
     }
 };
 
@@ -129,6 +132,8 @@ var favRest = [
     }
 ];
 
+console.log(favRest[0])
+
 
 // function placeMarkerAndPopup(info, token, map) {
 //     geocode(info.address, token).then(function (coordinates) {
@@ -157,3 +162,32 @@ favRest.forEach(function (place) {
             marker.setPopup(popup)
         })
 })
+
+// drop down button
+
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+
+function scalingZoom(){
+$("#myDropdown")
+}
+
+
+// })();

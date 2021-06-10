@@ -59,27 +59,26 @@ function addMapEvent() {
     })
 }
 
-//What l is
 
 function setPopUp(textDetails) {
     let popup = new mapboxgl.Popup().setHTML(`<p>${textDetails}</p>`)
         .addTo(map);
     marker.setPopup(popup);
 
-var bobosInfo = {
-    address: "Bobo's",
-    popupHTML: "<p>Welcome to Bobo's!</p>"
-}
+    var bobosInfo = {
+        address: "Bobo's",
+        popupHTML: "<p>Welcome to Bobo's!</p>"
+    }
 
     var dutchPot = {
         address: "Dutch Pot",
         popupHTML: "<p>Welcome to Dutch Pot!</p>"
     }
 
-        var jjGourment = {
-            address: "JJ Gourment",
-            popupHTML: "<p>Welcome to JJ's</p>"
-        }
+    var jjGourment = {
+        address: "JJ Gourment",
+        popupHTML: "<p>Welcome to JJ's</p>"
+    }
 };
 
 var geojson = [
@@ -103,28 +102,33 @@ var geojson = [
         type: 'Feature',
         geometry: {
             type: 'Point',
-            coordinates: [-80.2367902926663,26.155621372683342],
+            coordinates: [-80.2367902926663, 26.155621372683342],
             description: "The Dutch Pot"
         }
     }
 ];
 
-// var mapLeaflet = L.mapbox.map('map-leaflet')
-//     .setView([37.8, -96], 4)
-//     .addLayer(L.mapbox.styleLayer('mapbox://styles/mapbox/light-v10'));
-//
-// L.marker([38.913184, -77.031952]).addTo(mapLeaflet);
-// L.marker([37.775408, -122.413682]).addTo(mapLeaflet);
-//
-// mapLeaflet.scrollWheelZoom.disable();
-//
-//
-// var mapGeo = L.mapbox.map('map_geo')
-//     .setView([37.8, -96], 4)
-//     .addLayer(L.mapbox.styleLayer('mapbox://styles/mapbox/light-v10'));
-//
-// var myLayer = L.mapbox.featureLayer().setGeoJSON(geojson).addTo(mapGeo);
-// mapGeo.scrollWheelZoom.disable();
+var favRest = [
+    {
+        name: "<p>The Dutch Pot</p>",
+        // address: "-80.2367902926663,26.155621372683342",
+        address: "-6499A Sunset Strip, Sunrise, FL 33313",
+
+    },
+    {
+        description: "<p>Bobo's Chinese TakeOut</p>",
+        // address: "-80.24015428234213, 26.15570514223824",
+        address: "-6839 Sunset Strip, Fort Lauderdale, FL 33313",
+
+    },
+    {
+        description: "<p>JJ Gourment</p>",
+        // address: "-80.240653, 26.155500",
+        address: "6937 Sunset Strip, Sunrise, FL 33313",
+
+    }
+];
+
 
 // function placeMarkerAndPopup(info, token, map) {
 //     geocode(info.address, token).then(function (coordinates) {
@@ -140,3 +144,16 @@ var geojson = [
 // }
 //
 // placeMarkerAndPopup(setPopUp(), mapboxgl.accessToken, map);
+
+favRest.forEach(function (place) {
+    geocode(place.address, token)
+        .then(function (location) {
+            var marker = new mapboxgl.Marker()
+                .setLngLat(location)
+                .addTo(map);
+
+            var popup = new mapboxgl.Popup().setHTML(place.description)
+
+            marker.setPopup(popup)
+        })
+})

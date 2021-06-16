@@ -11,13 +11,23 @@
 
 fetch(`https://dog.ceo/api/breeds/image/random`)
     .then(response => response.json())
-    .then(data =>{
-        console.log(data)
+    .then(data=>{
+        // console.log(`Who let the dogs out!`, data)
         $("#random-dog-image").attr("src",data.message)
     })
-.catch(err =>{
+.catch(error =>{
     console.error(error)
-    alert("You done goofed up!")
-
+    alert("You did! You let the dogs out")
 })
+
+// TODO: create a second GET request to return the blog post with an id of 11 and display that blog post on the dom.
+fetch('https://jsonplaceholder.typicode.com/posts') // make a request - GET
+    .then(response => response.json())
+    .then(data =>{
+        console.log(data[10]);
+        $(".morningExercise").replaceWith(JSON.stringify(data[10]));
+    }) // we have the data in json format, now we can manipulate it
+    .catch(error => {
+        console.error(error);
+    });
 
